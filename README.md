@@ -34,7 +34,8 @@ _Widget_ yang datanya dapat diubah secara _external_ dan akan dirender ulang saa
 - Row : Display children dalam format horizontal <br />
 - FloatingActionButton : Menampilkan button yang dapat memberikan acrion tertentu <br />
 - Text : Display string dalam satu baris <br />
-- AppBar : Display toolbar widgets, seperti title dan actions. <br />
+- AppBar : Display toolbar widgets, seperti title dan actions <br />
+- Icon : Menampilkan icon ke dalam sebuah element. <br />
 
 ## Method `setState()`
 #### Apa fungsi dari `setState()`? Jelaskan variabel apa saja yang dapat terdampak dengan fungsi tersebut.
