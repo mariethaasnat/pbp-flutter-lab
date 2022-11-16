@@ -1,9 +1,10 @@
-# Tugas 7 PBP - README
+# README PBP Lab Flutter
 Nama : Marietha Asnat Nauli Sitompul <br />
 NPM : 2106752413 <br />
 Kelas : PBP - B <br />
-Kode Asdos : BI 
+Kode Asdos : BI <br />
 
+# Tugas 7 - Elemen Dasar Flutter
 ## _Stateless Widget_, _Stateful Widget_, dan Perbedaannya
 #### Jelaskan apa yang dimaksud dengan _stateless widget_ dan _stateful widget_ dan jelaskan perbedaan dari keduanya.
 **_Widget_** <br />
@@ -76,4 +77,64 @@ Mengimplementasikan _widget_ yang diperlukan pada program dan melakukan styling 
 - Mengganti teks dan warna tampilan berdasarkan _counter_ nya (ganjil berwarna biru dan genap berwarna merah) <br />
 - Memberikan conditional saat _counter_ == 0, dimana _button decrement_ tidak memiliki pengaruh apapun <br />
 - (Bonus) Memberikan conditional saat _counter_ == 0, _button decrement_ akan menghilang atau disembunyikan. <br />
-- Melakukan `git init - add - commit - push` ke dalam repositori baru bernama `pbp-flutter-lab`
+- Melakukan `git init - add - commit - push` ke dalam repositori baru bernama `pbp-flutter-lab` <br />
+
+
+# Tugas 8 - Flutter Form
+## `Navigator.push`, `Navigator.pushReplacement`, dan Perbedaannya
+#### Jelaskan perbedaan `Navigator.push` dan `Navigator.pushReplacement`.
+**`Navigator.push`** <br />
+... <br />
+
+**`Navigator.pushReplacement`** <br />
+... <br />
+
+**Perbedaan `Navigator.push` dan `Navigator.pushReplacement`** <br />
+| `Navigator.push` | `Navigator.pushReplacement` |
+| --- | --- |
+| ... | ... |
+
+## _Widget_ pada Project counter_7
+#### Sebutkan _widget_ apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+Selain _widget_ yang digunakan pada Tugas 7, saya juga menambahkan beberapa _widget_ lain, yaitu :
+- Padding : Sizing element <br />
+- Center : Meletakkan dan menampilkan element di tengah halaman <br />
+- SizedBox : Mengatur dan membuat kotak dengan ukuran tertentu <br />
+- Form : Tempat untuk mengelompokkan widget bidang form <br />
+- TextFormField : Mempertahankan bentuk formulir, sehingga update dan kesalahan dapat dilihat pada _User Interface_ atau UI <br />
+- Container : Menampung widget di dalamnya <br />
+- Navigator : Menuju routing halaman lain <br />
+- ListTile : Row dengan height yang konstan atau tetap <br />
+- DropdownButtonFormField : Menampung list of item dalam bentuk dropdown <br />
+- TextButton : Button yang memiliki fungsi saat diberikan _action_ oleh _user_ <br />- 
+
+## Jenis - Jenis _Event_ pada _Flutter_
+#### Sebutkan jenis-jenis _event_ yang ada pada _Flutter_.
+- `onPressed` <br />
+- `onSaved` <br />
+- `onChanged` <br />
+- `onClick` <br />
+- `onHover` <br />
+- `onTap` <br />
+- `onLongPress` <br />
+- `AnimationEvent` <br />
+- `ErrorEvent` <br />
+- dst. <br />
+
+## Cara Kerja `Navigator`
+#### Jelaskan bagaimana cara kerja `Navigator` dalam "mengganti" halaman dari aplikasi `Flutter`.
+Menggunakan prinsip _stack_ dimana halaman yang akan diganti akan dipush pada _top of stack_ dan jika ingin kembali ke halaman sebelumnya, menggunakan operasi _pop_ pada _stack_. Page yang saat ini dilihat akan dihapus dari stack dan tampilan _user_ akan berganti ke halaman sebelumnya. Method `Navigator.push` untuk menavigasi ke halaman selanjutnya dan method `Navigator.pop` untuk menavigasi kembali ke halaman sebelumnya. <br />
+
+## Implementasi Poin 1 - 4
+#### Jelaskan bagaimana cara kamu mengimplementasikan _checklist_ di atas.
+**Poin 1 : Menambahkan drawer/hamburger menu pada app yang telah dibuat sebeumnya.** <br />
+... <br />
+
+**Poin 2 : Menambahkan tiga tombol navigasi pada drawer/hamburger.** <br />
+... <br />
+
+**Poin 3 : Menambahkan halaman form.** <br />
+... <br />
+
+**Poin 4 : Menambahkan halaman data _budget_.** <br />
+... <br />
