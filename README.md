@@ -84,19 +84,21 @@ Mengimplementasikan _widget_ yang diperlukan pada program dan melakukan styling 
 ## `Navigator.push`, `Navigator.pushReplacement`, dan Perbedaannya
 #### Jelaskan perbedaan `Navigator.push` dan `Navigator.pushReplacement`.
 **`Navigator.push`** <br />
-... <br />
+Method _push_ yang digunakan untuk menambahkan rute lain ke atas tumpukan _screen_ atau _stack_ saat ini, dimana halaman baru akan ditampilkan di atas halaman sebelumnya. <br />
 
 **`Navigator.pushReplacement`** <br />
-... <br />
+Method _push_ yang menggantikan _page_ yang ditampilkan saat ini dengan _page_ baru yang akan ditampilkan. <br />
 
 **Perbedaan `Navigator.push` dan `Navigator.pushReplacement`** <br />
 | `Navigator.push` | `Navigator.pushReplacement` |
 | --- | --- |
-| ... | ... |
+| Layer akan ditimpa seperti pada _stack_ | Layer akan digantikan dengan layer baru yang dipush |
+| Menambahkan _route_ baru ke tumpukan _route_ sebelumnya | Membuang _route_ sebelumnya dan menggantikannya dengan _route_ baru yang di push |
+| Menambahkan _page_ pada _top of stack_ | Menghapus _top of stack_ sebelumnya dan menambahkan _page_ baru pada _top of stack_ |
 
 ## _Widget_ pada Project counter_7
 #### Sebutkan _widget_ apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
-Selain _widget_ yang digunakan pada Tugas 7, saya juga menambahkan beberapa _widget_ lain, yaitu :
+Selain _widget_ yang digunakan pada Tugas 7, saya juga menambahkan beberapa _widget_ lain, yaitu : <br />
 - Padding : Sizing element <br />
 - Center : Meletakkan dan menampilkan element di tengah halaman <br />
 - SizedBox : Mengatur dan membuat kotak dengan ukuran tertentu <br />
@@ -106,7 +108,8 @@ Selain _widget_ yang digunakan pada Tugas 7, saya juga menambahkan beberapa _wid
 - Navigator : Menuju routing halaman lain <br />
 - ListTile : Row dengan height yang konstan atau tetap <br />
 - DropdownButtonFormField : Menampung list of item dalam bentuk dropdown <br />
-- TextButton : Button yang memiliki fungsi saat diberikan _action_ oleh _user_ <br />- 
+- TextButton : Button yang memiliki fungsi saat diberikan _action_ oleh _user_ <br />
+- Card : Membentuk component kartu seperti container dan diloop untuk setiap data nya. <br />
 
 ## Jenis - Jenis _Event_ pada _Flutter_
 #### Sebutkan jenis-jenis _event_ yang ada pada _Flutter_.
@@ -128,13 +131,14 @@ Menggunakan prinsip _stack_ dimana halaman yang akan diganti akan dipush pada _t
 ## Implementasi Poin 1 - 4
 #### Jelaskan bagaimana cara kamu mengimplementasikan _checklist_ di atas.
 **Poin 1 : Menambahkan drawer/hamburger menu pada app yang telah dibuat sebeumnya.** <br />
-... <br />
+Membuat drawer pada semua file yang dibutuhkan sesuai dengan soal. <br />
 
 **Poin 2 : Menambahkan tiga tombol navigasi pada drawer/hamburger.** <br />
-... <br />
+Membuat _routing_ atau navigasi pada drawer untuk mengarah ke halaman yang dituju, dimana navigasi pertama untuk ke halaman _counter_, navigasi kedua untuk ke halaman _form_, dan navigasi yang ketiga untuk ke halaman _data budget_ yang akan menampilkan data sesuai dengan input pada halaman _form_. <br />
 
 **Poin 3 : Menambahkan halaman form.** <br />
-... <br />
+Membuat halaman _form_ beserta elemen inputnya sesuai dengan soal, yaitu judul, nominal, tipe _budget_, dan sebuah _button_ untuk menyimpan _budget_. <br />
 
 **Poin 4 : Menambahkan halaman data _budget_.** <br />
-... <br />
+- Membuat class Budget dan ListBudget sebagai objek dan tempat penyimpanan objek budget. <br />
+- Menampilkan data yang terdapat pada form _budget_ menggunakan bantuan _card_. <br />
