@@ -4,6 +4,9 @@ NPM : 2106752413 <br />
 Kelas : PBP - B <br />
 Kode Asdos : BI <br />
 
+⭐ [Tugas 7 - Elemen Dasar Flutter](#tugas-7---elemen-dasar-flutter) </br>
+⭐ [Tugas 8 - Flutter Form](#tugas-8---flutter-form) </br>
+
 # Tugas 7 - Elemen Dasar Flutter
 ## _Stateless Widget_, _Stateful Widget_, dan Perbedaannya
 #### Jelaskan apa yang dimaksud dengan _stateless widget_ dan _stateful widget_ dan jelaskan perbedaan dari keduanya.
