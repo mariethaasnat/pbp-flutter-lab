@@ -69,9 +69,9 @@ class Fields {
 
   bool watched;
   String title;
-  int rating;
+  int? rating;
   DateTime releaseDate;
-  String review;
+  String? review;
 
   factory Fields.fromJson(Map<String, dynamic> json) => Fields(
     watched: json["watched"],
