@@ -1,5 +1,6 @@
 import 'package:counter_7/main.dart';
-import 'package:counter_7/form.dart';
+import 'package:counter_7/page/form.dart';
+import 'package:counter_7/widget/navigation.dart';
 import 'package:flutter/material.dart';
 
 class MyDataBudgetPage extends StatefulWidget {
@@ -14,45 +15,11 @@ class _MyDataPageState extends State<MyDataBudgetPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Form Budget'),
+        title: const Text('Data Budget'),
       ), // Menambahkan drawer menu
-      drawer: Drawer(
-        child: Column(
-          children: [
-            // Menambahkan clickable menu
-            ListTile(
-              title: const Text('counter_7'),
-              onTap: () {
-                // Route menu ke halaman utama
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MyHomePage()),
-                );
-              },
-            ),
-            ListTile(
-              title: const Text('Tambah Budget'),
-              onTap: () {
-                // Route menu ke halaman form
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MyFormPage()),
-                );
-              },
-            ),
-            ListTile(
-              title: const Text('Data Budget'),
-              onTap: () {
-                // Route menu ke halaman data
-                Navigator.pop(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MyDataBudgetPage()),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
+
+      drawer: const navigation(),
+
       body: Center(
         child: ListView.builder(
             itemCount: Budget.listBudget.length,
