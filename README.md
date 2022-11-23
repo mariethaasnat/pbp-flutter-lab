@@ -6,6 +6,7 @@ Kode Asdos : BI <br />
 
 ⭐ [Tugas 7 - Elemen Dasar Flutter](#tugas-7---elemen-dasar-flutter) </br>
 ⭐ [Tugas 8 - Flutter Form](#tugas-8---flutter-form) </br>
+⭐ [Tugas 9 - Integrasi Web Service pada Flutter](#tugas-9---integrasi-web-service-pada-flutter) </br>
 
 # Tugas 7 - Elemen Dasar Flutter
 ## _Stateless Widget_, _Stateful Widget_, dan Perbedaannya
@@ -145,3 +146,49 @@ Membuat halaman _form_ beserta elemen inputnya sesuai dengan soal, yaitu judul, 
 **Poin 4 : Menambahkan halaman data _budget_.** <br />
 - Membuat class Budget dan ListBudget sebagai objek dan tempat penyimpanan objek budget. <br />
 - Menampilkan data yang terdapat pada form _budget_ menggunakan bantuan _card_. <br />
+
+
+# Tugas 9 - Integrasi Web Service pada Flutter
+## Hubungan Pengambilan Data dari JSON dan Model 
+#### Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Pengambilan data JSON tanpa membuat model terlebih dahulu dapat dilakukan, yaitu dengan cara mengkonversikannya langsung setelah data JSON di decode dari url. <br />
+Pengambilan data JSON tanpa membuat model terlebih dahulu tidak lebih baik dibandingkan membuat model sebelum melakukan pengambilan data JSON. Jika tidak membuat model terlebih dahulu, terdapat kemungkinan data JSON yang diambil tidak sesuai dengan yang diharapkan. Selain itu, pengambilan data dengan membuat model terlebih dahulu membuat struktur data lebih baik dan mengurangi terjadinya kesalahan dalam pengambilan data. Sehingga dapat disimpulkan bahwa pengambilan data JSON lebih baik dengan membuat model terlebih dahulu. <br />
+
+## _Widget_ pada Project counter_7
+#### Sebutkan _widget_ apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+Selain _widget_ yang digunakan pada Tugas 7 dan Tugas 8, saya juga menambahkan beberapa _widget_ lain, yaitu : <br />
+- FutureBuilder : Men-generate array suatu widget berdasarkan suatu snapshot <br />
+- CircularProgressIndicator : Indikator lingkaran yang berputar yang mengindikasikan aplikasi sedang bekerja (masih tahap proses) <br />
+- InkWell : Area yang dapat merespon terhadap sentuhan <br />
+- Checkbox : Widget untuk menandakan status dan perubahan status <br />
+- Flexible : Mengendalikan ukuran dari widget lain seperti widget row, column, atau flex <br />
+- ListView : Widget yang bisa disusun secara linear dan dapat dilakukan action _scroll_ <br />
+- Drawer : Memberikan akses ke berbagai tujuan dan funsionalitas pada aplikasi. <br />
+
+## Mekanisme Pengambilan Data dari JSON
+#### Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+a. Menambahkan dependensi `http` <br />
+b. (Opsional) Membuat model sesuai dengan respons data <br />
+c. Membuat fungsi http request untuk mengambil data dari suatu url dan mendecode data yang sudah diambil dan diubah ke bentuk JSON <br />
+d. Melakukan HTTP Request dengan method `GET` dan respons yang didapatkan akan dikonversi ke dalam model yang telah dibuat <br />
+e. Menampilkan data yang telah dikonversi menggunakan `FutureBuilder`. <br />
+
+## Implementasi Poin 1 - 5
+#### Jelaskan bagaimana cara kamu mengimplementasikan _checklist_ di atas.
+**Poin 1 : Menambahkan tombol navigasi pada drawer/hamburger untuk ke halaman _mywatchlist_.** <br />
+Melakukan extract widget _drawer_ dan menambahkan tombol navigasi pada _drawer_. <br />
+
+**Poin 2 : Membuat satu file dart yang berisi model _mywatchlist_.** <br />
+Membuat model _mywatchlist_ berdasarkan yang telah dibuat pada Tugas 3 dengan menggunakan bantuan website _quicktype_. <br />
+
+**Poin 3 : Menambahkan halaman _mywatchlist_ yang berisi semua _watch list_ yang ada pada endpoint JSON di Django yang telah di _deploy_ ke Heroku sebelumnya.** <br />
+Menambahkan dependency http dan fungsinya untuk melakukan fetch data dari web Tugas 3 serta menambahkan permission internet pada Android. <br />
+Menampilkan data nya sesuai pada soal dan membuat setiap data akan routing ke halaman detail. <br />
+
+**Poin 4 : Menambahkan halaman detail untuk setiap _mywatchlist_ yang ada pada daftar tersebut.** <br />
+Melakukan passing model yang bersesuaian dengan card dan menampilkan data nya pada halaman detail. <br />
+
+**Poin 5 : Menambahkan tombol untuk kembali ke daftar _mywatchlist_.** <br />
+Menambagkan button back untuk kembali. <br />
+
+Implementasi bagian Bonus. <br />
